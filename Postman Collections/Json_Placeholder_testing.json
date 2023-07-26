@@ -1,0 +1,473 @@
+{
+	"info": {
+		"_postman_id": "1c61312c-6a1b-4fe1-a2b8-47aa73da4063",
+		"name": "JSON PLACEHOLDER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "db58d03c-7dff-408c-b419-8adfd09b9cd1",
+						"exec": [
+							"pm.test(\"Check status code\",()=> {\r",
+							"    pm.response.to.have.status (200)\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Check status code\", () => {\r",
+							"    pm.expect(pm.response.code).to.eql(200)\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Check response time is less than 100ms\", () => {\r",
+							"    console.log(pm.response)\r",
+							"    pm.expect(pm.response.time).to.lessThan(100)\r",
+							"})\r",
+							"\r",
+							"pm.test(\"check status if is ok\", () => {\r",
+							"    pm.expect(pm.response.status).to.eql(\"OK\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "bf1bb2f0-3faf-46d9-90cf-2a73f296616c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://jsonplaceholder.typicode.com/posts/47"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comments",
+			"_postman_id": "7edb8ade-d51e-429f-971e-f520b71c72ab",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"postId\": 10,\r\n        \"id\": 501,\r\n        \"name\": \"Joanna\",\r\n        \"email\": \"test@test.com\",\r\n        \"body\": \"new comment\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://jsonplaceholder.typicode.com/comments"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Albums",
+			"_postman_id": "494530f4-6bc9-4512-a7c4-64a86c771e47",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://jsonplaceholder.typicode.com/albums"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"_postman_id": "8a09be79-570b-43a3-a603-4ac0dbd1e568",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://jsonplaceholder.typicode.com/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Variable Todos",
+			"_postman_id": "31531845-e191-4338-b83b-9099abe898fb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseURL}}/todos"
+			},
+			"response": []
+		},
+		{
+			"name": "Global  Photos",
+			"_postman_id": "3e525ea2-15d6-4c0a-b9ee-191f2fff64f2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/photos"
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Post",
+			"_postman_id": "7eb4faf6-6627-492c-a13b-014686e0fb9a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"userId\": 1,\r\n        \"id\": 101,\r\n        \"title\": \"test post\",\r\n        \"body\": \"example post\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://jsonplaceholder.typicode.com/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Comment",
+			"_postman_id": "786753ed-0896-4df7-9c0d-3afd95cac9e3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"postId\": 1,\r\n        \"id\": 2,\r\n        \"name\": \"test\",\r\n        \"email\": \"test@test.com\",\r\n        \"body\": \"write new comment\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://jsonplaceholder.typicode.com/comments"
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Album",
+			"_postman_id": "721f401c-cf52-466d-a0bc-b3bf1989accc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"userId\": 1,\r\n        \"id\": 1,\r\n        \"title\": \"add new album\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://jsonplaceholder.typicode.com/albums"
+			},
+			"response": []
+		},
+		{
+			"name": "Add new User",
+			"_postman_id": "da87a923-459d-41a4-bf7b-1576da1afca0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 9,\r\n        \"name\": \"Joanna Kozar\",\r\n        \"username\": \"Dragonna\",\r\n        \"email\": \"test@test.com\",\r\n        \"address\": {\r\n            \"street\": \"Test\",\r\n            \"suite\": \"Test 449\",\r\n            \"city\": \"Test City\",\r\n            \"zipcode\": \"1234-5678\",\r\n            \"geo\": {\r\n                \"lat\": \"24.6463\",\r\n                \"lng\": \"-168.8889\"\r\n            }\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://jsonplaceholder.typicode.com/posts/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Todo",
+			"_postman_id": "d23de183-3ddd-41bf-80e3-343a6ddb1e08",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"userId\": 4,\r\n        \"id\": 63,\r\n        \"title\": \"Add New Todo\",\r\n        \"completed\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://jsonplaceholder.typicode.com/todos"
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Photo",
+			"_postman_id": "771cc9a0-758e-44be-b6da-a360b3f40fe0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"albumId\": 96,\r\n        \"id\": 4766,\r\n        \"title\": \"Add Test Photo\",\r\n        \"url\": \"https://via.placeholder.com/test\",\r\n        \"thumbnailUrl\": \"https://via.placeholder.com/test\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://jsonplaceholder.typicode.com/photos"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"_postman_id": "8775ae06-214b-4ad3-b277-bf79415cec45",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"userId\": 1,\r\n        \"id\": 4,\r\n        \"title\": \"Update Title\",\r\n        \"body\": \"Update Title\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://jsonplaceholder.typicode.com/posts/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Comment",
+			"_postman_id": "41c70e65-298d-45cb-bc14-5ed97070e978",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"postId\": 1,\r\n        \"id\": 3,\r\n        \"name\": \"Joanna\",\r\n        \"email\": \"Test@test.com\",\r\n        \"body\": \"Update Comment\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://jsonplaceholder.typicode.com/comments/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Album",
+			"_postman_id": "8cf056f6-7f65-454e-b6c7-4a5d19fee860",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"userId\": 1,\r\n        \"id\": 3,\r\n        \"title\": \"Update Album\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://jsonplaceholder.typicode.com/albums/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"_postman_id": "a2db663f-25fd-472d-a480-4a849dc6fbb2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"Joanna Kozar\",\r\n        \"username\": \"Dragonna\",\r\n        \"email\": \"test@test.com\",\r\n        \"address\": {\r\n            \"street\": \"Dragonna Light\",\r\n            \"suite\": \"556\",\r\n            \"city\": \"Warsaw\",\r\n            \"zipcode\": \"59300\",\r\n            \"geo\": {\r\n                \"lat\": \"-37.3159\",\r\n                \"lng\": \"81.1496\"\r\n            }\r\n        },\r\n        \"phone\": \"1-770-736-8031 x56442\",\r\n        \"website\": \"hildegard.org\",\r\n        \"company\": {\r\n            \"name\": \"Romaguera-Crona\",\r\n            \"catchPhrase\": \"Multi-layered client-server neural-net\",\r\n            \"bs\": \"harness real-time e-markets\"\r\n        }\r\n}\r\n    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://jsonplaceholder.typicode.com/users/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Photo",
+			"_postman_id": "5765c210-9af3-491e-a833-a20edb82c288",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"albumId\": 96,\r\n        \"id\": 4766,\r\n        \"title\": \"update photo\",\r\n        \"url\": \"https://via.placeholder.com/600/917bf8\",\r\n        \"thumbnailUrl\": \"https://via.placeholder.com/150/917bf8\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://jsonplaceholder.typicode.com/photos/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Comment",
+			"_postman_id": "f80e284b-a3d4-4a85-ab08-bb91eeab0e53",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://jsonplaceholder.typicode.com/comments/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Album",
+			"_postman_id": "df9486f5-61b4-4b94-b880-b88c3fe859c6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://jsonplaceholder.typicode.com/albums/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todos",
+			"_postman_id": "cdb16095-248d-426c-aa22-2e256f348286",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://jsonplaceholder.typicode.com/todos/40"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"_postman_id": "432a359c-9101-4a1d-ad24-45b377692f55",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://jsonplaceholder.typicode.com/posts/15"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"_postman_id": "ebfbd456-3bc4-49b5-9a53-6f1b10647fca",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://jsonplaceholder.typicode.com/users/33"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo",
+			"_postman_id": "17e23544-3bda-49c7-8de9-af01a9a45fa9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://jsonplaceholder.typicode.com/todos/40"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "584f04cf-929b-42f6-bce1-b78ba6e1b20a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "dd9583aa-c941-41d5-8925-abe3cde9d813",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "99373d7b-96c3-47aa-9333-1d194e7b7cb0",
+			"key": "baseURL",
+			"value": "https://jsonplaceholder.typicode.com",
+			"type": "string"
+		}
+	]
+}
