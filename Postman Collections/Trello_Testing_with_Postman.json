@@ -1,0 +1,475 @@
+{
+	"info": {
+		"_postman_id": "9806b35f-4b71-4ae6-9974-6dd046fb0ff0",
+		"name": "TRELLO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all boards",
+			"_postman_id": "d225eaa5-01a8-41ef-9292-83944550c086",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/members/me/boards?key=a202aab01063d3e9ff37236fb6b81e69&token=ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"members",
+						"me",
+						"boards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "a202aab01063d3e9ff37236fb6b81e69",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a board",
+			"_postman_id": "76e10e37-b8e2-4a25-b5bc-3a75aef73dfb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/boards/649b2635b8f3c2d0815e74f4?key=a202aab01063d3e9ff37236fb6b81e69&token=ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"boards",
+						"649b2635b8f3c2d0815e74f4"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "a202aab01063d3e9ff37236fb6b81e69"
+						},
+						{
+							"key": "token",
+							"value": "ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new board",
+			"_postman_id": "cf2f0ed4-392c-4e0a-8667-c4858a2a4314",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/boards/?name=Board_1&key=a202aab01063d3e9ff37236fb6b81e69&token=ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Board_1"
+						},
+						{
+							"key": "key",
+							"value": "a202aab01063d3e9ff37236fb6b81e69"
+						},
+						{
+							"key": "token",
+							"value": "ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all boards2",
+			"_postman_id": "e46fff26-fb62-4b9e-b3ff-ecb92e4506f2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/members/me/boards?key=a202aab01063d3e9ff37236fb6b81e69&token=ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"members",
+						"me",
+						"boards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "a202aab01063d3e9ff37236fb6b81e69"
+						},
+						{
+							"key": "token",
+							"value": "ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a list on Board_1",
+			"_postman_id": "ae241b80-1438-424c-a8fa-edd1464ebe91",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/boards/64c1403b626bdae5f171b22a/lists?name=List_1&key=a202aab01063d3e9ff37236fb6b81e69&token=ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"boards",
+						"64c1403b626bdae5f171b22a",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "List_1"
+						},
+						{
+							"key": "key",
+							"value": "a202aab01063d3e9ff37236fb6b81e69"
+						},
+						{
+							"key": "token",
+							"value": "ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Lists",
+			"_postman_id": "5018ae46-7777-4210-af36-1ff26b6418f8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/boards/64c1403b626bdae5f171b22a/lists?key=a202aab01063d3e9ff37236fb6b81e69&token=ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"boards",
+						"64c1403b626bdae5f171b22a",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "a202aab01063d3e9ff37236fb6b81e69"
+						},
+						{
+							"key": "token",
+							"value": "ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a Card to List",
+			"_postman_id": "b68ae748-30e8-4712-bbb9-f53c0fab632c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/cards?idList=64c142bd491ceb32a751856d&key=a202aab01063d3e9ff37236fb6b81e69&token=ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E&name=Card_2",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "64c142bd491ceb32a751856d"
+						},
+						{
+							"key": "key",
+							"value": "a202aab01063d3e9ff37236fb6b81e69"
+						},
+						{
+							"key": "token",
+							"value": "ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E"
+						},
+						{
+							"key": "name",
+							"value": "Card_2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Card",
+			"_postman_id": "1354fb03-6aba-407f-841b-38f50f5af5a3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/cards/64c1488f925b1a830530fa00/?key={{key}}&token={{token}}&name=Card Trello",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"cards",
+						"64c1488f925b1a830530fa00",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "name",
+							"value": "Card Trello",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cards",
+			"_postman_id": "a293cca0-7fa6-4810-bb25-810b1b8eb3b5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/lists/64c142bd491ceb32a751856d/cards?key={{key}}&token={{token}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"lists",
+						"64c142bd491ceb32a751856d",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Board",
+			"_postman_id": "bf44e0b0-bab3-497f-b764-27e4c5a4b445",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/boards/64c13fe54403f623c6cb8e7f?key=a202aab01063d3e9ff37236fb6b81e69&token=ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"boards",
+						"64c13fe54403f623c6cb8e7f"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "a202aab01063d3e9ff37236fb6b81e69"
+						},
+						{
+							"key": "token",
+							"value": "ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update List",
+			"_postman_id": "665287c9-53e6-42c2-a5f3-2c145a9186f5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/lists/64c1403b626bdae5f171b232?key={{key}}&token={{token}}&name=In Progress",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"lists",
+						"64c1403b626bdae5f171b232"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "name",
+							"value": "In Progress"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Card to List",
+			"_postman_id": "24e76875-0a70-4e77-b3bc-bed507677ea1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/cards/?idList=64c1403b626bdae5f171b232&token={{token}}&key={{key}}&name=Test Card",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"cards",
+						""
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "64c1403b626bdae5f171b232"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "name",
+							"value": "Test Card"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ed8b7205-6003-4f6d-9ebf-079e836b5c07",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1f99b39d-c99a-4cda-9324-3ae6aead2ce8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "d286d7c6-12d3-4e71-9b72-5eed093055a9",
+			"key": "baseURL",
+			"value": "https://api.trello.com/1",
+			"type": "string"
+		},
+		{
+			"id": "f43f49d0-60ff-4f70-9456-eb084e2e4c5e",
+			"key": "key",
+			"value": "a202aab01063d3e9ff37236fb6b81e69",
+			"type": "string"
+		},
+		{
+			"id": "92bb825f-b41c-4abb-b46e-a95b38ab21e3",
+			"key": "token",
+			"value": "ATTAe73fe067083f459bfc752b1f30887200ca768f1aa247639bb06f7df369167e5d0B3C7F4E",
+			"type": "string"
+		}
+	]
+}
